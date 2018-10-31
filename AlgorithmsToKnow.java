@@ -11,42 +11,72 @@ public class AlgorithmsToKnow
 {
     // return the number of times value occurs in an array
     public static int count(int[] nums, int value) {
+        int count = 0;
         
+        for (int i=0; i<nums.length; i++) {
+            if (nums[i] == value) {
+                count++;
+            }
+        }
         
-        return 0;
+        return count;
     }
 
     // return the sum of all elements in an array
     public static int sum(int[] nums) {
+        int sum = 0;
         
+        for (int i=0; i<nums.length; i++) {
+            sum += nums[i];
+        }
         
-        return 0;
+        return sum;
     }
     
     // return the maximum value in an array
     public static int max(int[] nums) {
+        int max = nums[0];
         
+        for (int i=1; i<nums.length; i++) {
+            if (nums[i] > max) {
+                max = nums[i];
+            }
+        }
         
-        return 0;
+        return max;
     }
     
     // return the minimum value in an array
     public static int min(int[] nums) {
+        int min = nums[0];
         
+        for (int i=1; i<nums.length; i++) {
+            if (nums[i] < min) {
+                min = nums[i];
+            }
+        }
         
-        return 0;
+        return min;
     }
     
     // determine if an array contains a value using a linear search
-    public static boolean contains(int[] nums) {
-        
+    public static boolean contains(int[] nums, int value) {
+        for (int i=1; i<nums.length; i++) {
+            if (nums[i] == value) {
+                return true;
+            }
+        }        
         
         return false;
     }
     
     // determine the location of a value if it exists in an array
     public static int find(int[] nums, int value) {
-        
+        for (int i=1; i<nums.length; i++) {
+            if (nums[i] == value) {
+                return i;
+            }
+        }        
         
         return -1;
     }
@@ -54,7 +84,9 @@ public class AlgorithmsToKnow
     public  static void main(String[] args) {
         int[] values = new int[] {4, 9, 12, 11, 0, 19, 4, 2, 12, 4, 12};
         
+        System.out.println( count(values, 12) );
         System.out.println( sum(values) );
+        System.out.println( max(values) );
     }
     
     /* Think about...

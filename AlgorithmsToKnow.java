@@ -59,7 +59,12 @@ public class AlgorithmsToKnow
     
     /* Think about...
      *
+     * - How could you modify the sum algorithm to return the mean value in a data set? (I wouldn't do this with ints.)
      * - How could you modify the max/min algorithms to find the LOCATION of the max/min values rather than the values themselves?
      * - With a linear search, what happens if the query value occurs multiple times in the array?
+     * - Why do some algorithms have return statements both in the loop and at the end while others only contain a single return 
+     *   statement?
+     * - How would you modify the count algorithm to look at consecutive values? For example, how could you count the number of
+     *   times consecutive values are the same?
      */
 }
